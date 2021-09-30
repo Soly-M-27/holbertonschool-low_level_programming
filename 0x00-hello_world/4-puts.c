@@ -1,5 +1,6 @@
 #!/bin/bash
 #include <stdio.h>
+int puts(const char* str);
 int main()
 {
 	//string initialization
