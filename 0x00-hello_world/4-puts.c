@@ -1,11 +1,9 @@
-#!/bin/bash
 #include <stdio.h>
-int puts(const char* str);
-int main()
+int main(void)
 {
-	//string initialization
-	char Line[] = "Programming is like building a multilingual puzzle\n";
-	puts(Line); // writing the string to stdout
+	puts("Programming is like building a multilingual puzzle\n");
 
-	return 0;
+	getchar();
+
+	return (0);
 }
