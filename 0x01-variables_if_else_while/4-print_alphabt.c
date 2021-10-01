@@ -8,7 +8,7 @@ int main(void)
 {
 	int x;
 
-	for(x = 'a'; x <= 'z'; x++)
+	for (x = 'a'; x <= 'z'; x++)
 	{
 		switch (x)
 		{
@@ -24,7 +24,7 @@ int main(void)
 		{
 			putchar('\n');
 		}
-		
+
 	}
 
 	return (0);
