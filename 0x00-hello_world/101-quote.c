@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+#include <stdlib.h>
 
 /**
  * main - Prints a string without using puts or printf
@@ -9,9 +9,6 @@
 int main(void)
 {
 
-	char ch = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
-	char far *pointer = (char far *) 0xb8000000;
-	*pointer = ch;
-	getch();
+	system("echo \"and that piece of art is useful\" - Dora Korpar, 2015-10-19");
 	return (1);
 }
