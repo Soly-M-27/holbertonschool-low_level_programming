@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 
 /**
  * main - Prints a string without using puts or printf
@@ -9,6 +9,6 @@
 int main(void)
 {
 
-	system("echo \"and that piece of art is useful\" - Dora Korpar, 2015-10-19");
+	write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 60);
 	return (1);
 }
