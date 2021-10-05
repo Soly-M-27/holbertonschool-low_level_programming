@@ -10,6 +10,7 @@ int _islower(int c);
 int _isalpha(int c);
 int print_sign(int n);
 int _abs(int);
+int print_last_digit(int);
 void positive_or_negative(int i);
 
 #endif /* MAIN_H */
