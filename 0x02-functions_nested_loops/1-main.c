@@ -1,8 +1,7 @@
 #include "main.h"
-#include "1-alphabet.c"
 
 /**
- * main -check the code
+ * main - checks the code
  *
  * Return: Always 0.
  */
