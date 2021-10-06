@@ -7,12 +7,15 @@
  * Return: z
  */
 
-int print_last_digit(int x)
+int print_last_digit(int z)
 {
-	int z;
+	z = z % 10;
 
-	z = x % 10;
-	_putchar('0' + z);
+	if (z < 0)
+	{
+		z *= -1;
+	}
 
+	_putchar(z + '0');
 	return (z);
 }
