@@ -11,29 +11,44 @@ void times_table(void)
 	int i;
 	int j;
 	int catch;
+	int fd;
+	int ld;
 
 	for (i = 0; i <= 9; i++)
 	{
 		for (j = 0; j <= 9; j++)
 		{
 			catch = i * j;
+			fd = catch / 10;
+			ld = catch % 10;
 
-			if (catch == 0 || catch <= 9)
+			if (fd == 0 && j < 9)
 			{
 				_putchar(catch + '0');
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(' ');
 			}
-			else if (catch > 9)
+			else if (fd > 0 && j < 9)
 			{
-				_putchar((catch/10) + '0');
-				_putchar((catch % 10) + '0');
+				_putchar(fd + '0');
+				_putchar(ld + '0');
 				_putchar(',');
 				_putchar(' ');
 			}
-		_putchar('\n');
+			else
+			{
+				if (fd == 0)
+				{
+					_putchar(catch + '0');
+				}
+				else
+				{
+					_putchar(fd + '0');
+					_putchar(ld + '0');
+				}
+			}
 		}
+		_putchar('\n');
 	}
 }
