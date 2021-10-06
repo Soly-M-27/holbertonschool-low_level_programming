@@ -11,26 +11,33 @@ void times_table(void)
 	int i;
 	int j;
 	int catch;
-	int catch2;
 
-	for (i ='0'; i <= '9'; i++)
+	for (i = 0; i <= 9; i++)
 	{
-		for (j = '0'; j <= '9'; j++)
+		_putchar('0');
+		_putchar(',');
+		_putchar(' ');
+
+		for (j = 0; j <= 9; j++)
 		{
 			catch = i * j;
-			catch2 = catch % 9;i
 
-			
-			
-
-			if (catch != catch % 9)
+			if ((catch / 10) > 0)
 			{
-				_putchar(catch + '0');
+				_putchar((catch / 10) + '0');
 			}
 			else
 			{
-				printf("%d\n", catch);
+				_putchar(' ');
+			}
+			_putchar((catch % 10) + '0');
+
+			if (catch < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
+		_putchar('\n');
 	}
 }
