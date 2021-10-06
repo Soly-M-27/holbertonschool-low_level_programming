@@ -15,23 +15,27 @@ void print_to_98(int n)
 	{
 		for (x = n; x < 99; x++)
 		{
-			printf("%d, ", x);
-
-			if (x == 98)
+			if (x != 98)
 			{
-				printf("\n");
+				printf("%d, ", x);
+			}
+			else if (x == 98)
+			{
+				printf("%d\n", x);
 			}
 		}
 	}
 	else if (n > 98)
 	{
-		for (x = n; x > 99; x--)
+		for (x = n; x > 97; x--)
 		{
-			printf("%d, ", x);
-
-			if (x == 98)
+			if (x != 98)
 			{
-				printf("\n");
+				printf("%d, ", x);
+			}
+			else if (x == 98)
+			{
+				printf("%d\n", x);
 			}
 		}
 	}
