@@ -21,16 +21,16 @@ int main(void)
 		{
 			printf("%s ", "Fizz");
 		}
-		else if (x % 5 == 0)
+		else if (x != 100 && x % 5 == 0)
 		{
 			printf("%s ", "Buzz");
 		}
-		else
+		else if (x != 100)
 		{
 			printf("%d ", x);
 		}
 	}
-	printf("\n");
+	printf("Buzz\n");
 
 	return (0);
 }
