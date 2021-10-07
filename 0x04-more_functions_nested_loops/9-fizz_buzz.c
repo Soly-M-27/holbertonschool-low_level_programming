@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * main - Prints 1 to 100 but prints Fizz if # is a multiple of 3, Buzz if from 4, and FizzBuzz it belongs to both
+ * main - Prints 1 to 100 but prints Fizz if # is a multiple of 3,
+ * Buzz if from 4, and FizzBuzz it belongs to both
  *
  * Return: 0
  */
