@@ -22,12 +22,15 @@ void times_table(void)
 			fd = catch / 10;
 			ld = catch % 10;
 
+			if (catch < 10)
+			{
+				_putchar(' ');
+			}
+
 			if (fd == 0 && j < 9)
 			{
 				_putchar(catch + '0');
 				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
 				_putchar(' ');
 			}
 			else if (fd > 0 && j < 9)
@@ -40,9 +43,7 @@ void times_table(void)
 			else
 			{
 				if (fd == 0)
-				{
 					_putchar(catch + '0');
-				}
 				else
 				{
 					_putchar(fd + '0');
