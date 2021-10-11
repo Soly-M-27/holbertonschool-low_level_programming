@@ -10,19 +10,15 @@
 
 void print_rev(char *s)
 {
-	int len, x;
+	int len = strlen(s), x, y;
+	char r[1000];
 
-	len = strlen(s);
+	y = len - 1;
 
-	for (x = len; x >= 0; x--)
+	for (x = 0; x < len; x++)
 	{
-		if (x > 0)
-		{
-			printf("%c", *(s + x));
-		}
-		else if (x == 0)
-		{
-			printf("%c\n", *(s + x));
-		}
+		r[x] = s[y];
+		y--;
 	}
+	puts(r);
 }
