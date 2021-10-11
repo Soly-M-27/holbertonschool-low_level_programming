@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * print_rev - function that prints a string, in reverse, followed by a new line
+ * print_rev - Prints a string in reverse, followed by a new line
  * @s: Holds strings adress
  *
  * Return: void
@@ -18,4 +18,5 @@ void print_rev(char *s)
 	{
 		printf("%c", *(s + x));
 	}
+	putchar('\n');
 }
