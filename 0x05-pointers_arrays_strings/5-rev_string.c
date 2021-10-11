@@ -2,13 +2,13 @@
 #include <string.h>
 
 /**
- * print_rev - Prints a string in reverse, followed by a new line
- * @s: Holds strings adress
+ * rev_string - Function that reverses a string
+ * @s: Holds string
  *
  * Return: void
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int len = strlen(s), x;
 
@@ -18,6 +18,5 @@ void print_rev(char *s)
 
 		s[x] = s[len - x - 1];
 		s[len - x - 1] = ch;
-		puts(s);
 	}
 }
