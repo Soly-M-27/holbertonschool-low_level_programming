@@ -14,7 +14,7 @@ void print_rev(char *s)
 	int len = strlen(s), len2 = strlen(s);
 
 	if (*s == '\0')
-		_putchar(' ');
+		_putchar(',');
 	else
 	{
 		for (; len >= 0; len--)
