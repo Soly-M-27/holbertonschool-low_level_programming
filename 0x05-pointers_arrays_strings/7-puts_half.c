@@ -18,5 +18,4 @@ void puts_half(char *str)
 	{
 		printf("%c", *(str + (n + 1)));
 	}
-	printf("\n");
 }
