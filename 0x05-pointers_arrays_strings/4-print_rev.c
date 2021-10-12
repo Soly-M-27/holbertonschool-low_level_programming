@@ -12,26 +12,17 @@
 void print_rev(char *s)
 {
 	int len = strlen(s), len2 = strlen(s);
-	char *empty;
 
-	empty = "";
-
-	if (s == empty)
+	if (*s == '\0')
+		return;
+	else
 	{
-		int x = 0;
-
-		while(s[x] != '\0')
+		for (; len >= 0; len--)
 		{
-			_putchar(s[x]);
-			x++;
+			if (len == len2)
+				len--;
+			_putchar(s[len]);
 		}
+		_putchar('\n');
 	}
-
-	for (; len >= 0; len--)
-	{
-		if (len == len2)
-			len--;
-		_putchar(s[len]);
-	}
-	_putchar('\n');
 }
