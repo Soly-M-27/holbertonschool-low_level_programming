@@ -17,15 +17,21 @@ void print_rev(char *s)
 	empty = "";
 
 	if (s == empty)
-		_putchar('""');
-	else
 	{
-		for (; len >= 0; len--)
+		int x = 0;
+
+		while(s[x] != '\0')
 		{
-			if (len == len2)
-				len--;
-			_putchar(s[len]);
+			_putchar(s[x]);
+			x++;
 		}
-		_putchar('\n');
 	}
+
+	for (; len >= 0; len--)
+	{
+		if (len == len2)
+			len--;
+		_putchar(s[len]);
+	}
+	_putchar('\n');
 }
