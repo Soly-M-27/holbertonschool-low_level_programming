@@ -16,6 +16,9 @@ void print_rev(char *s)
 
 	empty = "";
 
+	if (*s == *empty)
+		break;
+
 	for (; len >= 0; len--)
 	{
 		if (len == len2)
@@ -23,7 +26,4 @@ void print_rev(char *s)
 		_putchar(s[len]);
 	}
 	_putchar('\n');
-	
-	if (*s == *empty)
-		_putchar('\n');
 }
