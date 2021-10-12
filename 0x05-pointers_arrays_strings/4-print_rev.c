@@ -18,12 +18,14 @@ void print_rev(char *s)
 
 	if (s == empty)
 		_putchar('""');
-
-	for (; len >= 0; len--)
+	else
 	{
-		if (len == len2)
-			len--;
-		_putchar(s[len]);
+		for (; len >= 0; len--)
+		{
+			if (len == len2)
+				len--;
+			_putchar(s[len]);
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
