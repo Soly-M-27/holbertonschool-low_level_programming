@@ -17,7 +17,7 @@ void print_rev(char *s)
 	empty = "";
 
 	if (s == empty)
-		_putchar(' ');
+		_putchar('""');
 
 	for (; len >= 0; len--)
 	{
