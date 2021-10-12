@@ -13,16 +13,11 @@ void print_rev(char *s)
 {
 	int len = strlen(s), len2 = strlen(s);
 
-	if (*s == '\0')
-		_putchar(',');
-	else
+	for (len -= 1; len >= 0; len--)
 	{
-		for (; len >= 0; len--)
-		{
-			if (len == len2)
-				len--;
-			_putchar(s[len]);
-		}
-		_putchar('\n');
+		if (len == len2)
+			len--;
+		_putchar(s[len]);
 	}
+	_putchar('\n');
 }
