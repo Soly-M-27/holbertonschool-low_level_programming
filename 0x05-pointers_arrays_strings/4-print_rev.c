@@ -16,8 +16,8 @@ void print_rev(char *s)
 	if (s[0] == '\0')
 	{
 		_putchar(s[0]);
-		_putchar('\n');
 	}
+	_putchar('\n');
 	else
 	{
 		for (; len >= 0; len--)
