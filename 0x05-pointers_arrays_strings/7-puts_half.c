@@ -11,6 +11,9 @@
 void puts_half(char *str)
 {
 	int len = strlen(str), n;
+	char *hf, y = '\n';
+
+	hf = &y;
 
 	n = (len - 1) / 2;
 
@@ -18,4 +21,5 @@ void puts_half(char *str)
 	{
 		printf("%c", *(str + (n + 1)));
 	}
+	puts(hf);
 }
