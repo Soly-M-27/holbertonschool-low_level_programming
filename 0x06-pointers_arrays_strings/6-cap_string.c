@@ -16,9 +16,10 @@ char *cap_string(char *str)
 	{
 		if (x == 0)
 		{
-			if (str[x] <= 'a' && str[x] >= 'z')
-				str[x] = str[x] - 32;
+			if (str[0] >= 'a' && str[0] <= 'z')
+				str[0] = str[0] - 32;
 		}
+		
 		j = x;
 
 		while (str[j] == ',' || str[j] == ';' || str[j] == '.' ||
