@@ -20,8 +20,8 @@ char *cap_string(char *str)
 				str[x] = str[x] - 32;
 		}
 
-		/*if (str[x] == '\t')
-			str[x] = ' ';*/
+		if (str[x] == '\t')
+			str[x] = ' ';
 
 		if (str[x] == ',' || str[x] == ';' || str[x] == '.' ||
 				str[x] == '!' || str[x] == '?' || str[x] == '"' ||
