@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncat - Appends src string to dest string
+ * _strncpy - Appends src string to dest string
  * @dest: Holds first string
  * @src: Holds second string
  * @n: Holds number of bytes in src
