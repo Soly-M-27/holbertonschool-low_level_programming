@@ -10,7 +10,7 @@
 
 char *cap_string(char *str)
 {
-	int x;
+	int x, j;
 
 	for (x = 0; str[x] != '\0'; x++)
 	{
@@ -19,15 +19,17 @@ char *cap_string(char *str)
 			if (str[x] <= 'a' && str[x] >= 'z')
 				str[x] = str[x] - 32;
 		}
+		j = x;
 
-		if (str[x] == ',' || str[x] == ';' || str[x] == '.' ||
-				str[x] == '!' || str[x] == '?' || str[x] == '"' ||
-				str[x] == '(' || str[x] == ')' || str[x] == '{' ||
-				str[x] == '}' || str[x] == ' ' || str[x] == '\t' ||
-				str[x] == '\n')
+		while (str[j] == ',' || str[j] == ';' || str[j] == '.' ||
+				str[j] == '!' || str[j] == '?' || str[j] == '"' ||
+				str[j] == '(' || str[j] == ')' || str[j] == '{' ||
+				str[j] == '}' || str[j] == ' ' || str[j] == '\t' ||
+				str[j] == '\n')
 		{
-			if (str[x + 1] >= 'a' && str[x + 1] <= 'z')
-				str[x + 1] = str[x + 1] - 32;
+			if (str[j + 1] >= 'a' && str[j + 1] <= 'z')
+				str[j + 1] = str[j + 1] - 32;
+			j++;
 		}
 	}
 	return (str);
