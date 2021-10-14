@@ -20,6 +20,9 @@ char *cap_string(char *str)
 				str[x] = str[x] - 32;
 		}
 
+		if (str[x] == '\t')
+			str[x] = ' ';
+
 		while (str[x] == ',' || str[x] == ';' || str[x] == '.' ||
 				str[x] == '!' || str[x] == '?' || str[x] == '"' ||
 				str[x] == '(' || str[x] == ')' || str[x] == '{' ||
