@@ -20,18 +20,14 @@ char *cap_string(char *str)
 				str[x] = str[x] - 32;
 		}
 
-		if (str[x] == '\t')
-			str[x] = ' ';
-
 		if (str[x] == ',' || str[x] == ';' || str[x] == '.' ||
 				str[x] == '!' || str[x] == '?' || str[x] == '"' ||
 				str[x] == '(' || str[x] == ')' || str[x] == '{' ||
 				str[x] == '}' || str[x] == ' ' || str[x] == '\t' ||
 				str[x] == '\n')
 		{
-			x++;
-			if (str[x] >= 'a' && str[x] <= 'z')
-				str[x] = str[x] - 32;
+			if (str[x + 1] >= 'a' && str[x + 1] <= 'z')
+				str[x + 1] = str[x + 1] - 32;
 		}
 	}
 	return (str);
