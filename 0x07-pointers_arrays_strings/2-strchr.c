@@ -17,23 +17,9 @@ char *_strchr(char *s, char c)
 		if (!*s)
 			return ('\0');
 		else if (*s == c)
-			return (char *) s;
+			return ((char *) s);
 		s++;
 	}
 
-	return (char *)0;
-
-/*	int x;
-	char *p = s;
-
-	for (x = 0; s[x] != '\0'; x++)
-	{
-		if (s[x] == c)
-			p++;
-	}
-
-	if (p == s || !*s)
-		return ('\0');
-	else
-		return (p);*/
+	return ((char *)0);
 }
