@@ -12,7 +12,18 @@
 
 char *_strchr(char *s, char c)
 {
-	int x;
+	while (*s)
+	{
+		if (!*s)
+			return ('\0');
+		else if (*s == c)
+			return (char *) s;
+		s++;
+	}
+
+	return (char *)0;
+
+/*	int x;
 	char *p = s;
 
 	for (x = 0; s[x] != '\0'; x++)
@@ -24,5 +35,5 @@ char *_strchr(char *s, char c)
 	if (p == s || !*s)
 		return ('\0');
 	else
-		return (p);
+		return (p);*/
 }

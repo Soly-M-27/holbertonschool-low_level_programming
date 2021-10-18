@@ -1,4 +1,5 @@
 #include "main.h"
+#include <strings.h>
 
 /**
  * main - check the code
@@ -8,7 +9,7 @@
 
 int main(void)
 {
-	char *s = "hello, world";
+	char *s = "hello world";
 	char *f = "oleh";
 	unsigned int n;
 
