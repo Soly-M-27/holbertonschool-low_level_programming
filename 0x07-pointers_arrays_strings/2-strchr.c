@@ -21,7 +21,7 @@ char *_strchr(char *s, char c)
 			p++;
 	}
 
-	if (p == s)
+	if (p == 0)
 		return (NULL);
 	else
 		return (p);
