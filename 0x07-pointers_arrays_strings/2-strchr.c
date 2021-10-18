@@ -20,5 +20,9 @@ char *_strchr(char *s, char c)
 		if (s[x] == c)
 			p++;
 	}
+
+	if (p)
 		return (p);
+	else
+		return (NULL);
 }
