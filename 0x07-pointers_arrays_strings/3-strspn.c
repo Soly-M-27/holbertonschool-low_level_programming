@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strspn - Function that gets the length of a prefix substring
+ * _strspn - Function that gets the length of a prefix substring
  * @s: Holds first string
  * @accept: Holds string with letters to be counted from first
  * string
