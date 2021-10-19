@@ -17,7 +17,7 @@ char *_strpbrk(char *s, char *accept)
 	for (a = 0; s[a] != '\0'; a++)
 		;
 	pos = a;
-	
+
 	for (a = 0; s[a] != '\0'; a++)
 	{
 		for (b = 0; accept[b] != '\0'; b++)
@@ -33,7 +33,7 @@ char *_strpbrk(char *s, char *accept)
 		}
 	}
 	if (flag == 1)
-		return &s[pos];
+		return (&s[pos]);
 	else
 		return ('\0');
 }
