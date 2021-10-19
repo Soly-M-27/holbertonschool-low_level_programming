@@ -11,19 +11,17 @@
 
 void print_diagsums(int *a, int size)
 {
-	long int x, y, sum1 = 0, sum2 = 0;
+	int x, sum1 = 0, sum2 = 0, matrix = size * size;
 
-	for (x = 0; x < size; x++)
+	for (x = 0; x < matrix; x += (size + 1))
 	{
-		for (y = 0; y < size; y++)
-		{
-			if (x == y)
-				sum1 += a[x + y];
-
-			if (x + y == size - 1)
-				sum2 += a[x + y];
-		}
+		sum1 += a[x];
 	}
-	printf("%ld, %ld", sum1, sum2);
-	printf("\n");
+
+	for (x = (size - 1); x < matrix; x += (size - 1))
+	{
+		sum2 += a[x];
+		matrix--;
+	}
+	printf("%d, %d\n", sum1, sum2);
 }
