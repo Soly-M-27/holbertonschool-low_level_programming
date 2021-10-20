@@ -8,15 +8,7 @@
  * Return: int which is the natural square root of the entering n
  */
 
-int find_sqrt(int c, int r)
-{
-	if (c * c == r)
-		return (c);
-	else if (c * c > r)
-		return (-1);
-	return (find_sqrt(c + 1, r));
-}
-
+int find_sqrt(int c, int r);
 
 int _sqrt_recursion(int n)
 {
@@ -27,4 +19,22 @@ int _sqrt_recursion(int n)
 		return (1);
 
 	return (find_sqrt(1, n));
+}
+
+/**
+ * find_sqrt - Function that compares multiplication with total
+ * to check for square root
+ * @c: Holds first int + 1
+ * @r: Holds second int with total to compare
+ *
+ * Return: int with result
+ */
+
+int find_sqrt(int c, int r)
+{
+	if (c * c == r)
+		return (c);
+	else if (c * c > r)
+		return (-1);
+	return (find_sqrt(c + 1, r));
 }
