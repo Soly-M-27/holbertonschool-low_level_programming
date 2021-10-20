@@ -15,7 +15,7 @@ int find_sqrt(int c, int r)
 		return (c);
 	else if (c * c > r)
 		return (-1);
-	return (find_sqrt(c + 1. r));
+	return (find_sqrt(c + 1, r));
 }
 
 /**
