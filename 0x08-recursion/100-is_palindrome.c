@@ -3,8 +3,8 @@
 /**
  * Palindrome_check - checks if string is palindrome
  * @str: Holds string
- * @s: To compare the legth of the string
- * @e: The length of the string
+ * @c: To compare the legth of the string
+ * @len: The length of the string
  *
  * Return: int 1 if true, 0 if false and recall itself if
  * len + 1 > c
