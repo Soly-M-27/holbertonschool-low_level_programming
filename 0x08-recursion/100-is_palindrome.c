@@ -34,12 +34,7 @@ int Palindrome_check(char str[], int c, int len)
 
 int is_palindrome(char *s)
 {
-	int x, len;
-
-	for (x = 0; s[x] != '\0'; x++)
-		;
-
-	len = x;
+	int len = strlen(s);
 
 	if (len == 0)
 		return (0);
