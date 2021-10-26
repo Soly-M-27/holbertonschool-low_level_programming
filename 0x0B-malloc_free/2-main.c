@@ -9,8 +9,6 @@
 int main(void)
 {
 	char *s;
-	char *c;
-	char *d;
 
 	s = str_concat("Best ", "School");
 

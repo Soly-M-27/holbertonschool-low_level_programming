@@ -30,18 +30,12 @@ char *str_concat(char *s1, char *s2)
 	{
 		s3 = malloc(strlen(s1) + 1);
 
-		if (s3 == NULL)
-			return (NULL);
-
 		strcpy(s3, s1);
 	}
 
 	if (s1 == NULL && s2 != NULL)
 	{
 		s3 = malloc(strlen(s2) + 1);
-
-		if (s3 == NULL)
-			return (NULL);
 
 		strcpy(s3, s2);
 	}
