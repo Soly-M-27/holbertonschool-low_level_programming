@@ -42,5 +42,8 @@ char *str_concat(char *s1, char *s2)
 		strcpy(s3, s2);
 	}
 
-	return (s3);
+	if (s3 != NULL)
+		return (s3);
+	else
+		return (p);
 }
