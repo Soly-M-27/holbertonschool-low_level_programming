@@ -13,7 +13,7 @@ char *str_concat(char *s1, char *s2)
 	char *s3;
 
 	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+		s3 = " ";
 
 	if (s1 != NULL && s2 != NULL)
 	{
@@ -31,7 +31,8 @@ char *str_concat(char *s1, char *s2)
 
 		strcpy(s3, s1);
 	}
-	else if (s1 == NULL && s2 != NULL)
+
+	if (s1 == NULL && s2 != NULL)
 	{
 		s3 = malloc(strlen(s2) + 1);
 
