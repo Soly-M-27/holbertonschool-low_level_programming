@@ -13,8 +13,6 @@ int main(void)
 	char *d;
 
 	s = str_concat("Best ", "School");
-	c = str_concat("Hello", NULL);
-	d = str_concat(NULL, "Hello");
 
 	if (s == NULL)
 	{
@@ -22,8 +20,6 @@ int main(void)
 		return (1);
 	}
 	printf("%s\n", s);
-	printf("%s\n", c);
-	printf("%s\n", d);
 	free(s);
 	return (0);
 }
