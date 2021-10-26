@@ -10,10 +10,10 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *s3;
+	char *s3 = "";
 
 	if (s1 == NULL && s2 == NULL)
-		return (" ");
+		return (s3);
 
 	if (s1 != NULL && s2 != NULL)
 	{
