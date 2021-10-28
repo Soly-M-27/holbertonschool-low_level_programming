@@ -30,6 +30,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s3 == NULL)
 		return (NULL);
 
+	s3[x] = '\0';
+
 	for (x = 0, y = 0; s1[y] != '\0'; x++, y++)
 		s3[x] = s1[y];
 	for (y = 0; s2[y] != '\0' && y < n; y++, x++)
