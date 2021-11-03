@@ -6,7 +6,7 @@
  * a parameter on each element of an array
  * @array: Holds array of integers
  * @size: Holds the size of the array
- * @(*action)(int) - void function pointer
+ * @action: function pointer to iterate array
  *
  * Return: void
  */
