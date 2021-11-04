@@ -5,8 +5,8 @@
 /**
  * print_numbers - Function that prints numbers,
  * followed by a new line
- * @separator:
- * @n:
+ * @separator: passes coma as string
+ * @n: Holds the amount of elements being passed
  *
  * Return: void
  */
