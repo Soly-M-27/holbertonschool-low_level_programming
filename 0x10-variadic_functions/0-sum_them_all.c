@@ -22,7 +22,6 @@ int sum_them_all(const unsigned int n, ...)
 		total += temp;
 	}
 	va_end(args);
-	putchar('\n');
 
 	return (total);
 }
