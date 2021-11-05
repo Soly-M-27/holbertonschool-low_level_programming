@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "3-calc.h"
 
-
 /**
  * main - Calculator
  * @argc: Integer for elements of array argv
