@@ -3,7 +3,7 @@
 
 
 /**
- * main - main
+ * main - Calculator
  * @argc: Integer for elements of array argv
  * @argv: Array
  *
