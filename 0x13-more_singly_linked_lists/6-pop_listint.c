@@ -11,5 +11,30 @@
 
 int pop_listint(listint_t **head)
 {
+	int n = (*head)->n;
+	listint_t *tmp;
 
+	if (n == (*head)->n)
+	{
+		tmp = *head;
+		*head = (*head)->next;
+		free(tmp);
+	}
+	else
+	{
+		listint_t *current = *head;
+		while (current->next != NULL)
+		{
+			if (current->next->n == n)
+			{
+				tmp = current->next;
+				current->next = current->next->next;
+				free(tmp);
+				break;
+			}
+			else
+				current = current->next;
+		}
+	}
+	return (n);
 }
