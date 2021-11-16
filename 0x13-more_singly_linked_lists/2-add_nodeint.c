@@ -3,7 +3,7 @@
 /**
  * add_nodeint - Function that adds a new node at the
  * beginning of a listint_t list
- * @h: Head of the list
+ * @head: Head of the list
  * @n: Captures the numbers
  *
  * Return: Address of the new element, or NULL
