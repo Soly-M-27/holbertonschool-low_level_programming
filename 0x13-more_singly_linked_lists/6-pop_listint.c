@@ -26,6 +26,7 @@ int pop_listint(listint_t **head)
 	else
 	{
 		listint_t *current = *head;
+
 		while (current->next != NULL)
 		{
 			if (current->next->n == n)
