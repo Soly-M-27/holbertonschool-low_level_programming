@@ -16,21 +16,21 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		exit(97);
 		dprintf(2, "Usage: cp file_from file_to\n");
+		exit(97);
 	}
 
 	x = cp(av[1], av[2]);
 
 	if (x == -1)
 	{
-		exit(98);
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
+		exit(98);
 	}
 	else if (x == -2)
 	{
-		exit(99);
 		dprintf(2, "Error: Can't write to %s\n", av[2]);
+		exit(99);
 	}
 
 	return (0);
@@ -69,15 +69,15 @@ int cp(char *f_from, char *f_to)
 	c1 = close(from_NO);
 	if (c1 < 0)
 	{
-		exit(100);
 		dprintf(2, "Error: Can't close fd %d\n", from_NO);
+		exit(100);
 	}
 
 	c2 = close(to_NO);
 	if (c2 < 0)
 	{
-		exit(100);
 		dprintf(2, "Error: Can't close fd %d\n", to_NO);
+		exit(100);
 	}
 
 	return (1);
