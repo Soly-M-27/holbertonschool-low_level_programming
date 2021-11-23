@@ -23,7 +23,6 @@ int create_file(const char *filename, char *text_content)
 
 	if (fd == -1)
 		return (-1);
-	return (1);
 
 	for (x = 0; text_content[x] != '\0'; x++)
 		;
