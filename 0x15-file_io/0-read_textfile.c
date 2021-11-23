@@ -28,7 +28,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	read(rf, mal, letters);
 
-	write(STDOUT_FILENO, mal, letters);
+	if (!write(STDOUT_FILENO, mal, letters))
+		return (0);
 
 	return (letters);
 }
