@@ -77,7 +77,7 @@ int cp(char *f_from, char *f_to)
 	if (c2 < 0)
 	{
 		exit(100);
-		dprintf(2, "Error: Can't close fd %d\n", from_NO);
+		dprintf(2, "Error: Can't close fd %d\n", to_NO);
 	}
 
 	return (1);
