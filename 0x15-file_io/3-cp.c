@@ -60,7 +60,7 @@ int cp(char *f_from, char *f_to)
 	if (from_NO == -1 || x < 0)
 		return (-1);
 
-	to_NO = open(f_to, O_CREAT | O_TRUNC | O_WRONLY, 00664);
+	to_NO = open(f_to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	z = write(to_NO, tmp, x);
 
 	if (to_NO == -1 || x != z)
