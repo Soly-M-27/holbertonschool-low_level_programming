@@ -29,7 +29,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	read(rf, mal, letters);
 
 	if (!write(STDOUT_FILENO, mal, letters))
+	{
+		free(mal);
+		close(rf);
 		return (0);
+	}
 
 	free(mal);
 
