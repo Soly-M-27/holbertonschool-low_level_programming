@@ -35,32 +35,38 @@ int main(int ac, char **av)
 
 void cp_file(char *f_from, char *f_to)
 {
-	int from_NO, to_NO, x, c1, c2;
+	int from_NO, to_NO, x;
 	char tmp[1024];
 
 	from_NO = open(f_from, O_RDONLY);
 	x = read(from_NO, tmp, 1024);
 
-	if (from_NO == -1 || x < 0)
+	if (from_NO == -1 || !f_from)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", f_from);
 		exit(98);
 	}
 	to_NO = open(f_to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
 
-	if (to_NO == -1 || write(to_NO, tmp, x) != x)
+	while((x = read(from_NO, tmp, 1024)) > 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %d\n", to_NO);
-		exit(99);
+		if (to_NO == -1 || write(to_NO, tmp, x) != x)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %d\n", to_NO);
+			exit(99);
+		}
 	}
-	c1 = close(from_NO);
-	if (c1 < 0)
+	if (x == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", f_from);
+		exit(98);
+	}
+	if (close(from_NO) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from_NO);
 		exit(100);
 	}
-	c2 = close(to_NO);
-	if (c2 < 0)
+	if (close(to_NO) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to_NO);
 		exit(100);
