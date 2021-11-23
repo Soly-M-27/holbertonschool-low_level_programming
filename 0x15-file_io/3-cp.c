@@ -49,13 +49,13 @@ int main(int ac, char **av)
 int cp(char *f_from, char *f_to)
 {
 	int from_NO, to_NO, x, z, c1, c2;
-	char tmp[BUFSIZ];
+	char tmp[1024];
 
 	if (f_from == NULL || f_to == NULL)
 		return (0);
 
 	from_NO = open(f_from, O_RDONLY);
-	x = read(from_NO, tmp, BUFSIZ);
+	x = read(from_NO, tmp, 1024);
 
 	if (from_NO == -1 || x < 0)
 		return (-1);
