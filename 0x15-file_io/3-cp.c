@@ -44,7 +44,7 @@ void cp_file(const char *f_from, const char *f_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", f_from);
 		exit(98);
 	}
-	to_NO = open(f_to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	to_NO = open(f_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	while ((x = read(from_NO, tmp, 1024)) > 0)
 	{
