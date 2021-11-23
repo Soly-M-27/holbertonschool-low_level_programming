@@ -39,8 +39,7 @@ void cp_file(const char *f_from, const char *f_to)
 	char tmp[1024];
 
 	from_NO = open(f_from, O_RDONLY);
-
-	if (from_NO == -1 || !f_from)
+	if (!f_from || from_NO == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", f_from);
 		exit(98);
@@ -49,7 +48,7 @@ void cp_file(const char *f_from, const char *f_to)
 
 	while ((x = read(from_NO, tmp, 1024)) > 0)
 	{
-		if (to_NO == -1 || write(to_NO, tmp, x) != x)
+		if (write(to_NO, tmp, x) != x || to_NO == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %d\n", to_NO);
 			exit(99);
