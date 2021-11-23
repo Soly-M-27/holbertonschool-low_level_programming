@@ -13,12 +13,12 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int rf;
-	char *mal = malloc(sizeof(int) * letters);
+	char *mal = malloc(sizeof(char) * letters);
 
 	if (filename == NULL)
 		return (0);
 
-	rf = open("Requiescat", O_RDONLY);
+	rf = open(filename, O_RDONLY);
 
 	if (rf == -1)
 		return (0);
