@@ -23,10 +23,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (rf == -1)
 		return (0);
 
-	read(rf, mal, letters);
-
 	if (mal == NULL)
 		return (0);
+
+	read(rf, mal, letters);
 
 	write(STDOUT_FILENO, mal, letters);
 
