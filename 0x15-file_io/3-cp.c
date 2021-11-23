@@ -55,17 +55,13 @@ int cp(char *f_from, char *f_to)
 		return (0);
 
 	from_NO = open(f_from, O_RDONLY);
-	to_NO = open(f_to, O_CREAT | O_TRUNC | O_WRONLY, 00664);
 	x = read(from_NO, tmp, BUFSIZ);
-	while (x > 0)
-	{
-		z = write(to_NO, tmp, x);
-		x = read(from_NO, tmp, BUFSIZ);
-	}
 
 	if (from_NO == -1 || x < 0)
 		return (-1);
 
+	to_NO = open(f_to, O_CREAT | O_TRUNC | O_WRONLY, 00664);
+	z = write(to_NO, tmp, x);
 
 	if (to_NO == -1 || x != z)
 		return (-2);
