@@ -13,6 +13,9 @@ void cp_file(char *f_from, char *f_to);
 
 int main(int ac, char **av)
 {
+	if (av[1] == NULL || av[2] == NULL)
+		return (0);
+
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -35,13 +38,11 @@ int main(int ac, char **av)
 
 void cp_file(char *f_from, char *f_to)
 {
-	int from_NO, to_NO, x, z, c1, c2;
-	char tmp[BUFSIZ];
+	int from_NO, to_NO, x, c1, c2;
+	char tmp[1024];
 
-	if (f_from == NULL || f_to == NULL)
-		return;
 	from_NO = open(f_from, O_RDONLY);
-	x = read(from_NO, tmp, BUFSIZ);
+	x = read(from_NO, tmp, 1024);
 
 	if (from_NO == -1 || x < 0)
 	{
@@ -49,9 +50,8 @@ void cp_file(char *f_from, char *f_to)
 		exit(98);
 	}
 	to_NO = open(f_to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
-	z = write(to_NO, tmp, x);
 
-	if (to_NO == -1 || x != z)
+	if (to_NO == -1 || write(to_NO, tmp, x) != x)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %d\n", to_NO);
 		exit(99);
