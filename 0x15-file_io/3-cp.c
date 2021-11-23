@@ -57,7 +57,7 @@ int cp(char *f_from, char *f_to)
 	from_NO = open(f_from, O_RDONLY);
 	x = read(from_NO, tmp, BUFSIZ);
 
-	if (from_NO == -1 || x <= 0)
+	if (from_NO == -1 || x < 0)
 		return (-1);
 
 	to_NO = open(f_to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
