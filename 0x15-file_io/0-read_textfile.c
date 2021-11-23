@@ -14,21 +14,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int rf;
 	char *mal = malloc(sizeof(char) * letters);
+	int x, z;
+
+	if (mal == NULL)
+		return (0);
 
 	if (filename == NULL)
 		return (0);
 
 	rf = open(filename, O_RDONLY);
 
-	if (rf == -1)
-		return (0);
+	z = read(rf, mal, letters);
+	x = write(STDOUT_FILENO, mal, z);
 
-	if (mal == NULL)
-		return (0);
-
-	read(rf, mal, letters);
-
-	if (!write(STDOUT_FILENO, mal, letters))
+	if (x != z || rf < 0 || z < 0)
 	{
 		free(mal);
 		close(rf);
