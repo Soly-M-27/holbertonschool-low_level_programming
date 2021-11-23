@@ -45,12 +45,11 @@ void cp_file(const char *f_from, const char *f_to)
 		exit(98);
 	}
 	to_NO = open(f_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
 	while ((x = read(from_NO, tmp, 1024)) > 0)
 	{
 		if (write(to_NO, tmp, x) != x || to_NO == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %d\n", to_NO);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", f_to);
 			exit(99);
 		}
 	}
