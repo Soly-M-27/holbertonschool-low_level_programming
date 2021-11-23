@@ -13,9 +13,6 @@ void cp_file(char *f_from, char *f_to);
 
 int main(int ac, char **av)
 {
-	if (av[1] == NULL || av[2] == NULL)
-		return (0);
-
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
