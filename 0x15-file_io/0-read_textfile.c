@@ -31,5 +31,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!write(STDOUT_FILENO, mal, letters))
 		return (0);
 
+	free(mal);
+
+	close(rf);
+
 	return (letters);
 }
