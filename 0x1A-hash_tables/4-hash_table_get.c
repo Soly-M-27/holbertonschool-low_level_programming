@@ -13,7 +13,7 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int id;
-	char *result, *empty = "";
+	char *empty = "";
 	hash_node_t *checker;
 
 	if (ht == NULL || key == empty)
@@ -26,10 +26,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	while (checker != NULL)
 	{
 		if (strcmp(key, checker->key) == 0)
-			result = checker->value;
-
+			return checker->value;
 		checker = checker->next;
 	}
 
-	return (result);
+	return (NULL);
 }
