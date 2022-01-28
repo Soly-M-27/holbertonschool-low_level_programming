@@ -13,11 +13,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int x;
 	hash_node_t *added_node = malloc(sizeof(hash_node_t));
+	char *empty = "";
 
 	if (added_node == NULL)
 		return (0);
 
-	if (strcmp(key, "") == 0 || key == NULL || value == NULL || ht == NULL)
+	if (key == empty || key == NULL || value == NULL || ht == NULL)
 		return (0);
 
 	added_node->key = strdup(key);
