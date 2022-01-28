@@ -28,11 +28,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	x = key_index((const unsigned char *)key, ht->size);
 
 	if (ht->array[x] == NULL)
-		added_node->next = NULL;
+		ht->array[x] = added_node;
 	else
 		added_node->next = ht->array[x];
-
-	ht->array[x] = added_node;
 
 	return (1);
 }
