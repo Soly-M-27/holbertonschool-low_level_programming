@@ -18,7 +18,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (added_node == NULL)
 		return (0);
 
-	if (key == empty || key == NULL)
+	if (key == empty || key == NULL || value == NULL || ht == NULL)
 		return (0);
 
 	total_size = ht->size;
@@ -27,8 +27,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	for (; x < total_size; x++)
 	{
-		ht->array[x] = added_node;
+		if (ht->array[x] == NULL)
+			added_node->next = NULL;
+		else
+			added_node = ht->array[x];
 	}
+
+	ht->array[x] = added_node;
 
 	return (1);
 }
