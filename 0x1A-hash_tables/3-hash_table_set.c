@@ -14,24 +14,22 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int x;
 	hash_node_t *added_node = malloc(sizeof(hash_node_t));
 	char *empty = "";
-	char *copy;
+	char *copy_value, *copy_key;
 
-	if (added_node == NULL)
+	if (key == empty || key == NULL || value == NULL || ht == NULL || added_node == NULL)
 		return (0);
 
-	if (key == empty || key == NULL || value == NULL || ht == NULL)
-		return (0);
+	copy_value = strdup(value);
+	copy_key = strdup(key);
 
-	copy = strdup(value);
-
-	added_node->key = strdup(key);
-	added_node->value = copy;
+	added_node->key = copy_key;
+	added_node->value = copy_value;
 	x = key_index((const unsigned char *)key, ht->size);
 
 	if (ht->array[x] == NULL)
 		added_node->next = NULL;
 	else
-		added_node = ht->array[x];
+		added_node->next = ht->array[x];
 
 	ht->array[x] = added_node;
 
