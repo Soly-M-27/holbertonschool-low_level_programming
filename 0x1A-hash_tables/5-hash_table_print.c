@@ -2,7 +2,7 @@
 
 /**
  * hash_table_print - Function that prints a hash table
- * @ht = hash table
+ * @ht: = hash table
  *
  * Return: void
  */
