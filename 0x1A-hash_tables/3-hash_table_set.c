@@ -18,8 +18,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	added_node = malloc(sizeof(hash_node_t));
 
+	if (added_node == NULL)
+		return (0);
 	if (key == empty || key == NULL || value == NULL ||
-			ht == NULL || added_node == NULL)
+			ht == NULL)
 		return (0);
 	copy_value = strdup(value);
 	if (copy_value == NULL)
