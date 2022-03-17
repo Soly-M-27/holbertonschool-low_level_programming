@@ -1,6 +1,6 @@
-CC = gcc
+CC := gcc
+files = main.c school.c
+exec = school
 
-all: compile
-
-compile:
-    ${CC} $< -o $@
+all:
+    @echo ${CC} files -o exec
