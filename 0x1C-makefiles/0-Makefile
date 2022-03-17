@@ -1,0 +1,10 @@
+CC = gcc
+exec = ./
+
+all: compile execute
+
+compile:
+    ${CC} $< -o $@
+
+execute:
+    ${exec}$@
