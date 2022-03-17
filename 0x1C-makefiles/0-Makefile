@@ -1,2 +1,2 @@
 all: main.c school.c
-    @echo gcc main.c school.c -o school
+	@echo gcc main.c school.c -o school
