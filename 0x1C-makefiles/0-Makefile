@@ -1,6 +1,2 @@
-CC := gcc
-files = main.c school.c
-exec = school
-
 all:
-    @echo ${CC} files -o exec
+    @echo gcc main.c school.c -o school
