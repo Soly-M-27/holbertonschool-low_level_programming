@@ -6,11 +6,10 @@ RM = rm -f
 all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 clean:
-	${RM} ./ -name '*~' | xargs ${RM}
+	${RM} *~ ${NAME}
 oclean:
 	${RM} ${OBJ}
-fclean:
-	${RM} ${OBJ} ${NAME} ./ -name '*~' | xargs ${RM}
+fclean: clean oclean
 re:
 	${RM} *.so 
 	${RM} *.o
