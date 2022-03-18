@@ -3,14 +3,14 @@ SRC = main.c school.c
 OBJ = ${SRC:.c=.o}
 NAME = school
 RM = -rm
-all: clean oclean fclean re
+all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 clean:
-	${RM} ./ -name '*~' | xargs ${RM}
+	${RM} ./ -name '*~' | xargs rm
 oclean:
 	${RM} ${OBJ}
 fclean:
-	${RM} ${OBJ} ${NAME} ./ -name '*~' | xargs ${RM}
+	${RM} ${OBJ} ${NAME} ./ -name '*~' | xargs rm
 re:
 	${RM} *.so 
 	${RM} *.o
